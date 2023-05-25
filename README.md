@@ -5,6 +5,7 @@
 - [App Router](https://nextjs.org/docs/app/building-your-application/routing).
 - [Server Component](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#async-and-await-in-server-components).
 - [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions)
+- more...
 
 ---
 
@@ -21,6 +22,9 @@
 ## What is new with App Router in Next.js 13?
 
 - We can use async and await in Server Component.
+
+- If you need to use event handle or client hoohs like useEffect you can use Client Component and you can use that component inside Server Component.
+> ⚠️ Make sure to add `use client` in the top of Client Component file
 
 - All components inside the App Router are Server Components by default.
 
