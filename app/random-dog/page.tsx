@@ -18,8 +18,7 @@ const getRandomDogImage = async () => {
     }, 2500);
   });
 };
-// This error for TypeScript
-
+// This error form TypeScript
 /* @ts-expect-error Server Component */
 const RandomDog: FC<RandomDogProps> = async () => {
   const dog: any = await getRandomDogImage();

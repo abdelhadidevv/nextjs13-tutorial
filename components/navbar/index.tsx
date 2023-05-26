@@ -7,7 +7,7 @@ interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = () => {
   return (
-    <nav className="backdrop-blur fixed w-full">
+    <nav className="backdrop-blur fixed w-full z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center">
           <img src="/next.svg" className="h-6 sm:h-8 mr-3" alt="Next.js" />
@@ -46,6 +46,15 @@ const Navbar: FC<NavbarProps> = () => {
                 className="block py-2 pl-3 pr-4 text-white hover:text-blue-500"
               >
                 Random Dog
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/products"
+                className="block py-2 pl-3 pr-4 text-white hover:text-blue-500"
+              >
+                Server Action
               </Link>
             </li>
           </ul>
