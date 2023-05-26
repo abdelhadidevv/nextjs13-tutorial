@@ -5,6 +5,7 @@
 - [App Router](https://nextjs.org/docs/app/building-your-application/routing).
 - [Server Component](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#async-and-await-in-server-components).
 - [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions)
+- more...
 
 ---
 
@@ -22,11 +23,15 @@
 
 - We can use async and await in Server Component.
 
+- If you need to use event handle or client hoohs like useEffect you can use Client Component and you can use that component inside Server Component.
+> ⚠️ Make sure to add `use client` in the top of Client Component file
+
 - All components inside the App Router are Server Components by default.
 
 - If you need to use Client Component you have to add `use client` in the top of a component file.
 
 - If you are using `fetch()` function for fetching data the request will be Cached by default.
+- Cacheing and Revalidating the data with `axios` here you can find the way to do it.(https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config)
 
 - Revalidating Data with `fetch()` function. Example: If you have a page and this page display an image from api and the api will return random image every time you refresh the page.
   And we need the request be cached but in this case the image will not change when we try to refresh the page so we can solve this by using revalidate this will revalidate cached data at a specific interval. The revalidate property take number in seconds.
