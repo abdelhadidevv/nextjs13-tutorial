@@ -63,3 +63,18 @@ fetch("https://dog.ceo/api/breeds/image/random", { cache: "no-store" });
 
 **If you using TypeScript and you have Server Component have async and await and you need to use this component you will have problem. [Here you can find a fix for it.]
 (https://github.com/vercel/next.js/issues/42292)**
+
+---
+## What i can't do with Server Actions?
+
+- Server Actions cannot be defined within Client Components, but they can be imported. To use Server Actions in Client Components, you can import the action from a file containing a top-level "use server" directive.
+> **Note: You can also send Server Actions as a props to a Client Component**
+```js
+// app/actions.ts
+
+'use server'
+ 
+export async function addItem() {
+  // ... await new Promise
+}
+```
